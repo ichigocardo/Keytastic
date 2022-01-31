@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "keytastic:tier_1_rich_ore"
+  },
+  "result": "keytastic:tier_1_base_item",
+  "experience": 1,
+  "cookingtime": 100
+}

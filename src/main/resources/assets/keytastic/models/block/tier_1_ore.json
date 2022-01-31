@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "keytastic:block/tier_1_ore"
+  }
+}

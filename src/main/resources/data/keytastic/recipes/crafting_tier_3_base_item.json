@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RYR",
+    "YNY",
+    "RYR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "Y": {
+      "item": "keytastic:tier_2_base_item"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "keytastic:tier_3_base_item",
+    "count": 1
+  }
+}

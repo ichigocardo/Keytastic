@@ -1,0 +1,24 @@
+{
+  "item.keytastic.tier_1_base_item": "Simple Rune",
+  "item.keytastic.tier_1_base_item.tooltip": "Always elastic, yet an ingot with a soft touch...",
+  "item.keytastic.tier_2_base_item": "Complex Rune",
+  "item.keytastic.tier_2_base_item.tooltip": "Absorbing Material huh?",
+  "item.keytastic.tier_3_base_item": "Magical Rune",
+  "item.keytastic.tier_3_base_item.tooltip": "An energetic and vibrating Material, yet stable.",
+
+  "item.keytastic.tier_0_key": "Rusted Key",
+  "item.keytastic.tier_0_key.tooltip": "a random Rusted key.",
+  "item.keytastic.tier_011_key": "Eh?",
+  "item.keytastic.tier_021_key": "What is ....???",
+  "item.keytastic.tier_1_key": "Rune Key",
+  "item.keytastic.tier_1_key.tooltip": "a Strange Key...",
+  "item.keytastic.tier_0_locked_book": "Locked Book",
+  "item.keytastic.tier_0_locked_book.tooltip": "It is locked... What will be inside?",
+  "item.keytastic.common_spellbook_torch": "A simple Illumination Spell",
+  "item.keytastic.common_spellbook_torch.tooltip": "Casting it will bring Light!",
+
+  "block.keytastic.tier_1_ore": "Rune Ore",
+  "block.keytastic.tier_1_rich_ore": "Rich Rune Ore",
+
+  "itemGroup.keytastictab": "Keytastic!"
+}

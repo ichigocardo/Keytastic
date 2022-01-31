@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+ "ingredients": [
+   {"item": "keytastic:tier_1_key"},
+   {
+     "item": "keytastic:tier_2_base_item"
+   }
+ ],
+  "result": {
+    "item": "keytastic:tier_1_key",
+    "count": 1
+  }
+}
