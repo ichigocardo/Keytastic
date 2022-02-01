@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+ "ingredients": [
+   {"item": "keytastic:common_spellbook_torch"},
+   {
+     "item": "keytastic:common_spellbook_torch"
+   }
+ ],
+  "result": {
+    "item": "keytastic:common_spellbook_torch",
+    "count": 1
+  }
+}

@@ -19,6 +19,7 @@
 
   "block.keytastic.tier_1_ore": "Rune Ore",
   "block.keytastic.tier_1_rich_ore": "Rich Rune Ore",
+  "block.keytastic.tier_1_spell_item_illuminating_stone": "Illuminating Stone",
 
   "itemGroup.keytastictab": "Keytastic!"
 }

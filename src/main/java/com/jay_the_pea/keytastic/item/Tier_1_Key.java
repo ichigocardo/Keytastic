@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -21,6 +22,13 @@ import java.util.List;
 public class Tier_1_Key extends Item {
 
     private static String RARITY_TIER_NBT_KEY = "Rarity_Tier";
+    private static String[][] tier_chances =
+            {       {"heroic","3"},
+                    {"ultra_rare","4"},
+                    {"rare","5"},
+                    {"uncommon","8"},
+                    {"common","8"}
+            };
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
@@ -61,26 +69,23 @@ public class Tier_1_Key extends Item {
             return;
         }
         CompoundTag tag = pStack.getOrCreateTag();
-        String tier = Tier_Property.generate_Tier();
+        String tier = Tier_Property.generate_Tier(tier_chances);
         System.out.println("Tier: " + tier);
         tag.putString(RARITY_TIER_NBT_KEY,tier);
     }
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
-        System.out.println("used a Key.");
         if(!pContext.getLevel().isClientSide()){
             ItemStack off_hand_item = pContext.getPlayer().getItemInHand(InteractionHand.OFF_HAND);
             ItemStack main_hand_item = pContext.getPlayer().getItemInHand(InteractionHand.MAIN_HAND);
-            System.out.println(off_hand_item.getItem().getDescriptionId());
             if((off_hand_item.getItem().getDescriptionId().equals("item.keytastic.tier_0_locked_book")
                     && main_hand_item.getItem().getDescriptionId().equals("item.keytastic.tier_1_key"))
                     ||(off_hand_item.getItem().getDescriptionId().equals("item.keytastic.tier_1_key")
                     && main_hand_item.getItem().getDescriptionId().equals("item.keytastic.tier_0_locked_book"))){
-                System.out.println("inside the IF");
-                pContext.getPlayer().getItemInHand(InteractionHand.OFF_HAND).shrink(1);
-                pContext.getPlayer().getItemInHand(InteractionHand.MAIN_HAND).shrink(1);
-                pContext.getPlayer().addItem(ModItems.COMMON_SPELLBOOK_TORCH.get().getDefaultInstance());
+                pContext.getPlayer().setItemInHand(InteractionHand.MAIN_HAND, Blocks.AIR.asItem().getDefaultInstance());
+                pContext.getPlayer().setItemInHand(InteractionHand.OFF_HAND, Blocks.AIR.asItem().getDefaultInstance());
+                pContext.getPlayer().addItem(Common_Spellbook_Torch.createSpellbook());
             }
 
             return super.useOn(pContext);

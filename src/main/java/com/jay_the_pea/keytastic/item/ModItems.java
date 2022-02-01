@@ -43,7 +43,7 @@ public class ModItems {
 
 
     public static Item common_spellbook_torch =
-            new Common_Spellbook_Torch(new Item.Properties().tab(ModCreativeModeTab.KEYTASTIC_TAB).stacksTo(1));
+            new Common_Spellbook_Torch(new Item.Properties().tab(ModCreativeModeTab.KEYTASTIC_TAB).stacksTo(1).durability(501));
     public static final RegistryObject<Item> COMMON_SPELLBOOK_TORCH = ITEMS.register("common_spellbook_torch", () -> common_spellbook_torch);
 
     public static void register(IEventBus eventBus){
